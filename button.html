@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<meta charset="UTF-8">
+<head>
+<title> show me racoons</title>
+
+<style>
+
+    img{
+        margin: 100px auto;
+        display: block;
+    }
+    .button-area{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    button{
+        padding: 8px 20px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+    }
+
+</style>
+</head>
+<body>
+    <img id="img-area" src="https://cdn.mos.cms.futurecdn.net/YYH9o4wmSXJfvbzRTq5BTY-1200-80.jpg" alt="">
+
+    <div class="button-area">
+        <button onclick="racoon()">Show me a racoon!</button>
+        <button onclick="raccon2()" ,> Another! </button>
+    </div>
+
+    <script>
+        var img = document.getElementById("img-area");
+        function raccon(){
+            img.src='https://cdn.mos.cms.futurecdn.net/YYH9o4wmSXJfvbzRTq5BTY-1200-80.jpg';
+        }
+
+        function raccon2(){
+            img.src='https://www.gardeners.com/globalassets/articles/gardening/hero_thumbnail/5460-raccoon-2.jpg?$staticlink$';
+        }
+
+        function racoon3(){
+        img.src='https://notesfrompoland.com/wp-content/uploads/2020/11/7338343404_beb2844315_5k-scaled.jpg';
+        }
+    </script>
+</body>
+</html>

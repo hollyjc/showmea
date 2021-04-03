@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from tkinter import *
+import random
 
 app = Flask(__name__)
 
@@ -8,6 +10,7 @@ def enter_page():
 
 @app.route("/index")
 def index():
+    
     return render_template('index.html')
 
 @app.route("/about")
