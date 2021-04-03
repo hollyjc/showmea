@@ -4,7 +4,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def enter_page():
-    return "<h1> enter page </h1>"
+    return render_template('enter.html')
+
+@app.route("/index")
+def index():
+    return render_template('index.html')
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
 
 @app.errorhandler(404)
 def page_error(e):
