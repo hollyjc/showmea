@@ -1,1 +1,117 @@
-<h1> this will be the contact page, probs a flask form?</h1>
+<!DOCTYPE html>
+<html lang="en">
+<title>About Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: orangered;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: grey;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+</style>
+
+<body>
+    
+    <form action ="action_page.php" method="POST">
+
+    <form action=”mailto:holly_cooper@live.com.au”
+    method=”POST”
+    enctype=”multipart/form-data”
+    name=”EmailForm”>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bara-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Enjoy the racoons!</h1>
+</header>
+<div class="container">
+    <form action="action_page.php">
+        <form action=”mailto:holly_cooper@live.com.au”
+        method=”POST”
+        enctype=”multipart/form-data”
+        name=”EmailForm”>
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Name">
+  
+      <label for="lname">Email</label>
+      <input type="text" id="email" name="email" placeholder="Email">
+
+      </select>
+  
+      <label for="subject">I hope this is about racoons</label>
+      <textarea id="subject" name="subject" placeholder="Tell me about racoons..." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
