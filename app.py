@@ -2,6 +2,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route("/")
+def enter_page():
+    return "<h1> enter page </h1>"
 
 @app.errorhandler(404)
 def page_error(e):
