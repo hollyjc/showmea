@@ -14,6 +14,10 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route("/sad")
+def about():
+    return render_template('sad.html')
+
 @app.errorhandler(404)
 def page_error(e):
     print(e, "\n\n")
