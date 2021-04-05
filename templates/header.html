@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>About Page</title>
+  {% include 'header.html' %}
+</head>
+
+<body>
+  {% include 'navbar.html' %}
+
+  <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">You can email me if it's racoon related</h1>
+  </header>
+  <div class="container">
+    <form action="/contact" method="POST" name="EmailForm">
+
+      <label for="name">First Name</label>
+      <input type="text" id="name" name="name" placeholder="Name">
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Email">
+
+      <label for="subject">I hope this is about racoons</label>
+      <textarea id="subject" name="subject" placeholder="Tell me about racoons..." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+
+    </form>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+
+</html>
