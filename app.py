@@ -1,6 +1,6 @@
-from flask import Flask, render_template
-from tkinter import *
-import random
+from flask import Flask, render_template, request
+from flask_mail import Mail
+import os
 
 app = Flask(__name__)
 
@@ -10,7 +10,6 @@ def enter_page():
 
 @app.route("/index")
 def index():
-    
     return render_template('index.html')
 
 @app.route("/about")
@@ -18,11 +17,17 @@ def about():
     return render_template('about.html')
 
 @app.route("/contact")
-def about():
+def contact():
+    if(request.method == 'POST'):
+        name = request.form.get('name')
+        email = request.form.get('email')
+        subject = request.form.get('subject')
+        Mail.send_message('New Message from Show Me A Racoon', sender=email, recipients='holly_cooper@live.com.au',
+                          body=subject)
     return render_template('contact.html')
 
 @app.route("/sad")
-def about():
+def sad():
     return render_template('sad.html')
 
 @app.errorhandler(404)
@@ -31,4 +36,4 @@ def page_error(e):
     return render_template('404.html'), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port= os.environ.get("PORT", 5000), debug=False)
